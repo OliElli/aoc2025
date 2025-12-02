@@ -16,14 +16,15 @@ def main():
     part1 = 0
     part2 = 0
     for i, line in enumerate(data.split(',')):
-        print(line)
+        # print(line)
         first_id,last_id = int(line.split('-')[0]), int(line.split('-')[1])
         for i in range (first_id, last_id+1):
             j = len(str(i)) // 2
             if str(i)[0:j] == str(i)[j:j+len(str(i))]: # pt1
                 part1 += i
-                print(' ', str(i)[0:j], str(i)[j:j+int(len(str(i)))])
-
+            possible_lengths = len(str(i)) // 2
+            # for k in range(1, possible_lengths+1):
+            #     print('  1st:', str(k)[0:k], '2nd:', str(k)[k:k+len(str(k))])
 
     print(part1)
     print(part2)
