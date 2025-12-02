@@ -5,7 +5,7 @@ language: Python
 image: python
 code: /code
 workdir: /code
-cmd: python3 src/%zeroday%/main.py
+cmd: python3 src/day%zeroday%/main.py
 persistence: []
 daypath: "src/day%zeroday%/main.py"
 inputfile: "src/day%zeroday%/input.txt"
