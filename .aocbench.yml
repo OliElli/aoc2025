@@ -3,8 +3,8 @@ version: 1
 author: Oli
 language: Python
 image: python
-code: /code
-workdir: /code
+code: /
+workdir: /
 cmd: python3 src/%zeroday%/main.py
 persistence: []
 daypath: "src/day%zeroday%/main.py"
