@@ -16,13 +16,14 @@ def main():
     part1 = 0
     part2 = 0
     for i, line in enumerate(data.split(',')):
+        print(line)
         first_id,last_id = int(line.split('-')[0]), int(line.split('-')[1])
         for i in range (first_id, last_id+1):
-            if len(str(i)) % 2 != 0:    # Skip odd number of digits
-                continue
             j = len(str(i)) // 2
-            if str(i)[0:j] == str(i)[j:j+int(len(str(i)))]:
+            if str(i)[0:j] == str(i)[j:j+len(str(i))]: # pt1
                 part1 += i
+                print(' ', str(i)[0:j], str(i)[j:j+int(len(str(i)))])
+
 
     print(part1)
     print(part2)
