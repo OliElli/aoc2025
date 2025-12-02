@@ -1,0 +1,12 @@
+---
+version: 1
+author: Oli
+language: Python
+image: python
+code: /code
+workdir: /code
+cmd: python3 src/%day%/main.py
+persistence: []
+daypath: "src/day%day%/main.py"
+inputfile: "src/day%day%/input.txt"
+answerfile: "src/day%day%/output.txt"

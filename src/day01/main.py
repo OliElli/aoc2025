@@ -16,15 +16,36 @@ def main():
     position = 50
     part1 = 0
     part2 = 0
-    for i, line in enumerate(data.splitlines()):
+    for line in data.splitlines():
+        r_times = 0
+        l_times = 0
         if line.startswith('R'):
-            position += int(line.split('R')[1])
+            r_turn = int(line.split('R')[1])
+            position += r_turn
+            if position > 100:
+                if position % 100 == 0:
+                    r_times = (position // 100) - 1
+                else:
+                    r_times = (position) // 100
+                part2 += r_times
         elif line.startswith('L'):
-            position -= int(line.split('L')[1])
+            l_turn = int(line.split('L')[1])
+            if position == 0:
+                l_times = abs((position - l_turn) // 100) - 1
+                part2 += l_times
+            else:
+                l_times = abs((position - l_turn) // 100)
+                part2 += l_times
+            position -= l_turn
         position = position % 100
+
         if position == 0:
             part1 += 1
-    print(part1)
+
+    part2 += part1
+
+    print(part1) # 1172
+    print(part2) # 9237 too high, 6408 too low, 6452 too low, 7048 wrong
 
     with open('src/day01/output.txt', 'w') as f:
         f.write(f"{part1}\n")
