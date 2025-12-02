@@ -44,8 +44,8 @@ def main():
 
     part2 += part1
 
-    print(part1) # 1172
-    print(part2) # 9237 too high, 6408 too low, 6452 too low, 7048 wrong
+    print(part1)
+    print(part2)
 
     with open('src/day01/output.txt', 'w') as f:
         f.write(f"{part1}\n")
