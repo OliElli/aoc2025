@@ -1,7 +1,7 @@
 ---
 version: 1
 author: Oli
-language: Python
+language: Python:3.12
 image: python
 code: /code
 workdir: /code
